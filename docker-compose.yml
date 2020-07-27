@@ -1,0 +1,10 @@
+version: "3"
+services:
+  python-app:
+    build: flask/.
+    expose:
+      - 8000
+  nginx:
+    build: ngnix/.
+    ports:
+      - "4000:80"
